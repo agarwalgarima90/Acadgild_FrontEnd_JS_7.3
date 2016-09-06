@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 7.3</title>
+
+<script>
+        function test() {
+                var a = document.getElementById("input");
+                if(isNaN(a.value)) {
+                        a.style.backgroundColor = "red";
+                        b = a.value.length;
+                        text = a.value;
+                        setTimeout(function() {
+                                a.value = text.slice(0, -1);
+                                a.style.backgroundColor = "white";
+                        }, 500);
+                }
+                else {
+                        a.style.backgroundColor = "white";
+                }
+        }
+</script>
+</head>
+<body>
+        <form>
+                <input type="text" id="input" onkeyup="test()">
+        </form>
+</body>
+</html>
